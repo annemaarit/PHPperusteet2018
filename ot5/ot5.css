@@ -1,0 +1,33 @@
+/* 	file: ot5.css
+	desc: ot5 tyylimääritykset
+	date: 23.8.2018
+	auth: Maarit Parkkonen */
+
+	table {
+		font-family:Arial;
+		border-collapse: collapse;
+		margin:10px;
+	}	
+	th, td {
+		border-style:none;
+		padding: 5px 10px;
+		min-width:60px;
+		text-align: center;
+	}	
+	th {
+		background-color: #afbcfb;
+    }
+	.vari{
+		background-color:#cfe4dd ;
+		}
+	button {
+		padding: 10px;
+		margin:10px;
+	}
+	label {
+		display: block;
+		margin: 5px 0;
+	}
+	input {
+		display:block;
+	}

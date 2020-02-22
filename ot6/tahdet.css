@@ -1,0 +1,80 @@
+/*   file: tahde.css (oth6)
+	 desc: tähtitieteilijät sivuston tyylit
+	 date: 27.8.2018
+	 auth: Maarit Parkkonen */
+
+	#ok {
+		padding: 10px;
+		margin-bottom:10px;
+		margin-left:170px;
+		width: 100px;
+	}
+	
+	p {
+		text-align: center;
+		line-height: 1.5em;
+		margin:5px;
+	}	
+	
+	#uusi {
+		margin-left:170px;
+		margin-bottom:10px;
+	}
+	
+	label {
+		color: white;
+		width:150px;
+		float: left;
+		display: block;
+		text-align:right;
+		margin:5px;
+	}
+	
+	p, h2, h4{
+		color: white;
+	}
+	
+
+	h2 {
+		letter-spacing: 0.2em;
+	}
+	
+	input {
+		margin:10px;
+		width: 200px;
+	}
+	
+	body {
+		font-family: "Lato", sans-serif
+	}
+	
+	a {
+		color: #0088dd;
+		display: block;
+	}
+	
+	#kehys {
+		padding: 30px 60px 60px 60px;
+		max-width:480px;
+		border: 2px solid #0088dd;
+		background-image:url("images/galaksit.jpg");
+		margin: auto; 
+		-moz-box-shadow: inset 0 0 6px #000000;
+		-webkit-box-shadow: 0 0 6px #000000;
+		box-shadow: 0 0 6px #000000;		
+	}
+	
+	#sisus {
+		border: 2px solid white;
+		padding: 10px;
+		margin: 10px;
+		background-color:black;
+		-moz-box-shadow: inset 0 0 6px #ffffff;
+		-webkit-box-shadow: 0 0 6px #ffffff;
+		box-shadow: 0 0 6px #ffffff;
+
+	}
+	
+	@media (max-width: 480px) {
+		h2 {font-size:1.5em;}
+	}

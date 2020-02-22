@@ -1,0 +1,3 @@
+- Ot5LuoTk.php luo tietokannan (TEE TÄMÄ ENSIN)
+- Ot5a.html lisää tietokantaan testijoukkueet ja tulostaa ne
+- Ot5Index.html sovellus käsittelee tietokantaa

@@ -1,0 +1,65 @@
+/* 	file:  ot3a.css
+	desc:  ot3a.html -sivun tyylit
+	date:  4.4.2018
+	värit: http://colorpalettes.net/color-palette-3801/
+	auth:  Maarit Parkkonen */
+
+form {	
+	max-width:500px;	
+	background-color: #f8577e;	
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;	
+	box-shadow: 3px 3px 3px #000000;	
+	padding:10px;
+	color: white;
+	font-weight: bold;
+	font-size:20px;
+	text-shadow: 2px 2px 2px #111111;	
+	margin:auto;
+}	
+
+p, #virheet {	
+	background-color:#ffbac7;
+	padding: 5px;
+	}
+
+#tuloste {
+	font-size: 20px;
+	font-weight: bold;
+	color: #000000;	
+	text-shadow: none;
+}
+
+li {font-size: 18px;}
+
+label{
+	display: block;
+	margin: 5px;
+	color: #d0cfd2;
+	font-size:22px;
+	letter-spacing:0.1em;
+}
+
+.syote{
+	font-size:16px;
+	margin-bottom:10px;
+	width:400px;
+}
+
+.nappi{
+	padding:5px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 3px 3px 3px #000000;
+	min-width:80px;
+	margin: 10px;
+	display: block;
+	background-color:#3e4f2d;
+	color: #ffffff;
+}
+
+
+
+

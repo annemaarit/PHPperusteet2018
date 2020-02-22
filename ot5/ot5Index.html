@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!--file: ot5Index.html
+    desc: Valioliiga -sovelluksen pääsivu:
+			- liigataulukon näyttäminen
+			- uuden joukkueen lisäys
+			- joukkueen tietojen haku
+			- joukkueen tietojen päivittäminen
+			- joukkueen poistaminen
+    date: 23.8.2018
+    auth: Maarit Parkkonen-->
+	
+<html lang="fi">
+<head>
+  <title>Ot5, php</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="ot5.css">
+</head>
+<body>
+
+<div class="container"> 
+
+<h2>Veikkausliiga</h2>
+
+<!--PÄÄNÄYTTÖ**********************************************************************************************-->
+
+<div id="tulostus"></div>
+
+<div id="painikkeet">
+	<button type="button" class="btn btn-primary" id="uusi">Lisää</button>
+	<button type="button" class="btn btn-success" id="hae">Hae</button>
+	<button type="button" class="btn btn-info" id="paivita">Päivitä</button>	
+	<button type="button" class="btn btn-warning" id="poista">Poista</button>
+</div>
+
+<!--PÄIVITTÄMINEN********************************************************************************-->
+
+<div id="osaPaivita">
+  <h3>Päivitä</h3>     
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="joukkuePaivita">Joukkue:</label>
+      <div class="col-sm-11">
+        <input type="text" class="form-control" id="joukkuePaivita" placeholder="Nimi.." name="joukkuePaivita">
+      </div>
+    </div>
+	
+	<div id="paivitysKentat">
+		<div class="form-group">
+			<label class="control-label col-sm-1" for="voitotP">Voitot:</label>
+			<div class="col-sm-11">          
+				<input type="text" class="form-control" id="voitotP" placeholder="Kpl.." name="voitotP">
+			</div>
+		</div>
+	
+		<div class="form-group">
+			<label class="control-label col-sm-1" for="tasapelitP">Tasapelit:</label>
+			<div class="col-sm-11">          
+				<input type="text" class="form-control" id="tasapelitP" placeholder="Kpl.." name="tasapelitP">
+			</div>
+		</div>
+	
+		<div class="form-group">
+			<label class="control-label col-sm-1" for="tappiotP">Häviöt:</label>
+			<div class="col-sm-11">          
+				<input type="text" class="form-control" id="tappiotP" placeholder="Kpl.." name="tappiotP">
+			</div>
+		</div>
+	</div>
+	
+    <div class="form-group">        
+      <div class="col-sm-offset-1 col-sm-11">
+	    <button type="button" class="btn btn-default" id="haeTiedot">Hae tiedot</button>
+        <button type="button" class="btn btn-default" id="teePaivitys">Päivitä</button>
+		<button type="button" class="btn btn-default peru">Peruuta</button>
+      </div>
+    </div>
+  </form>	  
+</div>
+
+<!--LISÄÄ JOUKKUE LOMAKE************************************************************************************-->
+
+<div id="osaUusi">
+  <h3>Lisää joukkue</h3>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="joukkue">Joukkue:</label>
+      <div class="col-sm-11">
+        <input type="text" class="form-control" id="joukkue" placeholder="Nimi.." name="joukkue">
+      </div>
+    </div>
+	
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="voitot">Voitot:</label>
+      <div class="col-sm-11">          
+        <input type="text" class="form-control" id="voitot" placeholder="Kpl.." name="voitot">
+      </div>
+    </div>
+	
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="tasapelit">Tasapelit:</label>
+      <div class="col-sm-11">          
+		<input type="text" class="form-control" id="tasapelit" placeholder="Kpl.." name="tasapelit">
+      </div>
+    </div>
+	
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="tappiot">Häviöt:</label>
+      <div class="col-sm-11">          
+		<input type="text" class="form-control" id="tappiot" placeholder="Kpl.." name="tappiot">
+      </div>
+    </div>
+	
+    <div class="form-group">        
+      <div class="col-sm-offset-1 col-sm-11">
+        <button type="button" class="btn btn-default" id="tallenna">Tallenna</button>
+        <button type="button" class="btn btn-default peru">Peruuta</button>	
+      </div>
+    </div>
+  </form>
+</div>
+
+<!--HAKU LOMAKE**************************************************************************************************-->
+
+<div id="osaHae">
+  <h3>Hae joukkue</h3>
+  
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="joukkueHaku">Joukkue:</label>
+      <div class="col-sm-11">
+        <input type="text" class="form-control" id="joukkueHaku" placeholder="Nimi.." name="joukkueHaku">
+      </div>
+    </div>
+	
+    <div class="form-group">        
+      <div class="col-sm-offset-1 col-sm-11">
+        <button type="button" class="btn btn-default" id="teeHaku">Hae</button>
+		<button type="button" class="btn btn-default peru">Sulje</button>
+      </div>
+    </div>
+  </form>	  
+</div>
+
+<!--POISTA LOMAKE*********************************************************************-->
+
+<div id="osaPoista"> 
+  <h3>Poista joukkue</h3>
+  
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-1" for="joukkuePoista">Joukkue:</label>
+      <div class="col-sm-11">
+        <input type="text" class="form-control" id="joukkuePoista" placeholder="Nimi.." name="joukkuePoista">
+      </div>
+    </div>
+	
+    <div class="form-group">        
+      <div class="col-sm-offset-1 col-sm-11">
+        <button type="button" class="btn btn-default" id="poistaJoukkue">Poista</button>
+		<button type="button" class="btn btn-default peru">Peruuta</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+</div><!--container-->
+
+<!--oman skriptitiedoston sijainti -->		
+<script src="ot5.js"></script> 
+
+</body>
+</html>

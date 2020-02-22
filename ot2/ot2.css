@@ -1,0 +1,57 @@
+/* 	file: ot2.css
+	desc: ot2a.php, ot2b.php ja ot2c.php -tiedostojen
+		  tyylimääritykset
+	date: 3.4.2018
+	auth: Maarit Parkkonen */
+
+form {	
+	max-width:400px;	
+	background-color: #44b09e;	
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;	
+	box-shadow: 3px 3px 3px #000000;	
+	padding:10px;
+	color: white;
+	font-weight: bold;
+	font-size:20px;
+	text-shadow: 2px 2px 5px #111111;	
+	margin:20px;
+}	
+
+p {text-align: center;}
+
+h2 {color: #f8e0ea;}
+
+#tuloste {
+	font-size: 20px;
+	font-weight: bold;
+	color: #000000;	
+	text-shadow: none;
+}
+
+label{
+	display: block;
+	margin: 5px;
+}
+
+.syote{
+	font-size:16px;
+	margin-bottom:10px;
+	width:300px;
+}
+
+.nappi{
+	padding:5px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 3px 3px 3px #000000;
+	min-width:80px;
+	margin: 10px;
+	display: block;
+}
+
+
+
+

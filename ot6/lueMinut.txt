@@ -1,0 +1,2 @@
+1. Luo tietokanta luoTK.php -tiedostolla
+2. Aloita käyttö kirjaudu.php -tiedostosta
